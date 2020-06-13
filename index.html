@@ -4,9 +4,13 @@
 
   <head>
     <meta charset="UTF-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
     <title>Dolphin</title>
   </head>
   <body>
+<div style="text-align:right;">
+dolphinserway@gmail.com
+</div>
 <br><br><br><br><br><br><br><br><br>
 <div style="text-align:center;">
 <img src="dolphinlogo.PNG" width="330"height="110" >
@@ -15,9 +19,40 @@
     <form class="search">
       <input class ='keyword' type="text" name ='search' placeholder="name" />
     <div class="col text-center">
-<p><button class = "img-button" type= "submit" name="click"><i class ="fas fa-search"></i></button></p>
+<p id="dol"><button class = "img-button" type= "submit" name="click" onclick="add()"><i class ="fas fa-search"></i></button></p>
     </div>
     </form>
-    <script src="main.js"></script>
+    <script>
+const Searching = Search.prototype;
+
+function Search(){
+    this.keyword = document.querySelector('input[name = "search"]');
+    this.engine = document.querySelector('.SelectSearch');
+    this.button = document.querySelector('.img-button');
+    this.form = document.querySelector('.search');
+
+    this.Engine();
+}
+Searching.Engine = function(){
+    this.form.addEventListener('submit', e => {
+    
+        e.preventDefault();
+        
+        let keyword = this.keyword.value;
+
+        if(keyword == '오마이걸'||keyword == 'ohmygirl'){
+document.getElementById("dol").innerHTML = '돌핀<br>거짓말도 보여요<br>I found love<br>미제<br> love o cloc<br>illusion<br>tropical love<br>소나기<br>심해<br>메아리<br><br><br><br><br><br><br><br>';
+
+        }else if(keyword=='치킨'){
+alert('비밀정원\n 치킨')
+        }
+
+
+
+    });
+}
+
+new Search();
+</script>
   </body>
 </html>
