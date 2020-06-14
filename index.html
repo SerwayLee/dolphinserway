@@ -44,13 +44,12 @@ const Searching = Search.prototype;
 
 function Search(){
     this.keyword = document.querySelector('input[name = "search"]');
-    this.engine = document.querySelector('.SelectSearch');
     this.button = document.querySelector('.img-button');
     this.form = document.querySelector('.search');
 
-    this.Engine();
+    this.Data();
 }
-Searching.Engine = function(){
+Searching.Data = function(){
     this.form.addEventListener('submit', e => {
     
         e.preventDefault();
