@@ -70,8 +70,7 @@ Searching.Data = function(){
     this.form.addEventListener('submit', e => {
         e.preventDefault();
         
-        let keyword = this.keyword.value;
-         var url='https://ko.wikipedia.org/wiki/' + keyword;                                   
+        let keyword = this.keyword.value;                                 
 
         if(keyword == '오마이걸'||keyword == 'ohmygirl'){
 document.getElementById("dol").innerHTML = '돌핀<br>거짓말도 보여요<br>I found love<br>미제<br> love o cloc<br>illusion<br>tropical love<br>소나기<br>심해<br>메아리<br><br><br><br><br><br><br><br>';
@@ -82,7 +81,7 @@ document.getElementById("dol").innerHTML = 'Love maze<br>Outro:Wings(희망)<br>
 
         }
                              else {
-document.getElementById("dol").innerHTML = '<a href="url"target="_blank">위키백과(Wikipedia Korea) 바로가기</a> ';
+document.getElementById("dol").innerHTML = '<a href='https://ko.wikipedia.org/wiki/' + keyword;  "target="_blank">위키백과(Wikipedia Korea) 바로가기</a> ';
 
 
         }
