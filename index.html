@@ -19,7 +19,7 @@
       </style>
     <link rel="stylesheet" href="abc.css">
     <meta charset="UTF-8 />
-    <meta name="description" content="수록곡 찾아보기 수록곡 모아보기 수록곡 검색하기"/>
+    <meta name="description" content=""/>
     <meta name="naver-site-verification" content="50177945ce636b9008eb1e21e6e00e3e049e1b46" />
    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">                                                                                        
@@ -81,7 +81,12 @@ document.getElementById("dol").innerHTML = 'Love maze<br>Outro:Wings(희망)<br>
 
         }
                              else {
-                           
+                           {@
+ $file = file("good.txt");
+ $rand = rand(0,count($file)-1);
+}
+{$file[$rand]}
+                             
 document.getElementById("dol").innerHTML = keyword+', 데이터가 없습니다.메일을 보내 직접 추가해 보세요!<br>No data. Click the email adress<br>'+ '<a href= "https://ko.m.wikipedia.org/wiki/"+keyword>위키백과(Wikipedia Korea) 바로가기</a>'
         }
 
