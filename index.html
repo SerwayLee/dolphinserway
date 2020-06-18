@@ -11,6 +11,25 @@
 
   gtag('config', 'UA-169301730-1');
 </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+ 
+
+    $("#diva").load("good.txt");
+
+ 
+
+});
+
+ 
+
+ 
+
+</script>
     <style type "text/css">
       A:link{text-decoration:none;color:#646464}
             A:visited{text-decoration:none;color:#646464}
@@ -81,13 +100,9 @@ document.getElementById("dol").innerHTML = 'Love maze<br>Outro:Wings(희망)<br>
 
         }
                              else {
-                           {@
- $file = file("good.txt");
- $rand = rand(0,count($file)-1);
-}
-{$file[$rand]}
-<br>                             
-document.getElementById("dol").innerHTML = keyword+', 데이터가 없습니다.메일을 보내 직접 추가해 보세요!<br>No data. Click the email adress<br>'+ '<a href= "https://ko.m.wikipedia.org/wiki/"+keyword>위키백과(Wikipedia Korea) 바로가기</a>'
+
+                          
+document.getElementById("dol").innerHTML = <div id="diva"></div>
         }
 
 
