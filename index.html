@@ -6,6 +6,8 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=l7xxe8a7a37a25674589aab900d3d2106d2f"></script>
 <script type="text/javascript">
+		var lon, lat,lon2, lat2,lon3, lat3,lon4, lat4;
+
 			var map;
 			var markerInfo;
 			//출발지,도착지 마커
@@ -29,7 +31,6 @@
 					scrollwheel : true
 				});
 		
-	var lon, lat,lon2, lat2,lon3, lat3,lon4, lat4;
 	map.addListener("click", function onClick(evt){
 		var mapLatLng = evt.latLng;
 		
@@ -65,8 +66,6 @@
 	
 }
 	window.onload = function(){
-
-		var lon3, lat3;
 	map.addListener("click", function onClick(evt){
 		var mapLatLng = evt.latLng;
 		
