@@ -30,8 +30,7 @@
 					scrollwheel : true
 				});
 		
-				
-					var lat, lon;
+	var lon, lat;
 	map.addListener("click", function onClick(evt){
 		var mapLatLng = evt.latLng;
 		
@@ -39,7 +38,6 @@
 	});
 	
 	function coordConvert(lon, lat){
-		var selectLevel = $("#selectLevel").val();
 		$.ajax({
 			method:"GET",
 			url:"https://apis.openapi.sk.com/tmap/geo/coordconvert?version=1&format=json&callback=result",
@@ -49,17 +47,25 @@
 				"appKey" : "l7xxe8a7a37a25674589aab900d3d2106d2f",
 				"lon" : lon,
 				"lat" : lat,
-				var lon2 = lon;
-				var lat2 = lat;
+				"toCoord" : "EPSG3857"
+			},
+			success:function(response){
+				var resultCoordinate = response.coordinate;
+				
+				var lon2 = resultCoordinate.lon;
+				var lat2 = resultCoordinate.lat;
+				
+			    var result = lon+","+lat+"->"+lon2+","+lat2; 
+			},
+			error:function(request,status,error){
+				console.log("1");
 			}
-		}
-		       )}
-
-				
-
-				
-
-					var lat3, lon3;
+		});
+		
+	}
+	
+}
+		var lon3, lat3;
 	map.addListener("click", function onClick(evt){
 		var mapLatLng = evt.latLng;
 		
@@ -67,7 +73,6 @@
 	});
 	
 	function coordConvert(lon3, lat3){
-		var selectLevel = $("#selectLevel").val();
 		$.ajax({
 			method:"GET",
 			url:"https://apis.openapi.sk.com/tmap/geo/coordconvert?version=1&format=json&callback=result",
@@ -77,12 +82,24 @@
 				"appKey" : "l7xxe8a7a37a25674589aab900d3d2106d2f",
 				"lon" : lon3,
 				"lat" : lat3,
-				var lon4 = lon3;
-				var lat4 = lat3;
+				"toCoord" : "EPSG3857"
+			},
+			success:function(response){
+				var resultCoordinate = response.coordinate;
+				
+				var lon4 = resultCoordinate.lon;
+				var lat4 = resultCoordinate.lat;
+				
+			    var result = lon+","+lat+"->"+lon2+","+lat2; 
+			},
+			error:function(request,status,error){
+				console.log("2");
 			}
-		}
-		       )}
+		});
+		
+	}
 	
+}
 		
 				// 2. 시작, 도착 심볼찍기
 				// 시작
