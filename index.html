@@ -70,7 +70,7 @@
 }
 			
 					var lat3, lon3;
-	map.addListener("auxclick", function auxClick(evt){
+	map.addListener("dblclick", function onClick(evt){
 		var mapLatLng = evt.latLng;
 		
 	 	coordConvert(mapLatLng._lng, mapLatLng._lat);
