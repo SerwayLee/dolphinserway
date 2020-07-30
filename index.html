@@ -19,15 +19,12 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 6,
-          center: {lat: 41, lng: -86}
+          center: {lat: 37.309060, lng: 127.006630}
         });
 
         const cities = [
-          {lat: 41.88, lng: -87.62}, // Chicago
-          {lat: 43.05, lng: -87.95}, // Milwaukee
-          {lat: 42.33, lng: -83.04}, // Detroit
-          {lat: 39.76, lng: -86.15}, // Indianapolis
-          {lat: 38.62, lng: -90.19} // St. Louis
+          {lat: 37.309060, lng:127.006630}, // Chicago
+ 
         ];
 
         // Loop through cities, adding markers
@@ -57,44 +54,7 @@
       }
       }
       {
-  "originAddresses": [ "120 W Randolph St, Chicago, IL 60602, USA", "204 S Clark St, Chicago, IL 60604, USA", "629 N Desplaines St, Chicago, IL 60661, USA" ],
-  "destinationAddresses": [ "233 S Wacker Dr, Chicago, IL 60606, USA"],
-"rows": [ {
-  "elements": [ {
-    "status": "OK",
-    "duration": {
-      "Value": 458,
-      "text": "8 mins"
-    },
-    "distance": {
-      "value": 1911,
-      "text": "1.2 mi"
-    }
-  }], {
-  "elements": [ {
-    "status": "OK",
-    "duration": {
-      "value": 220,
-      "text": "4 mins"
-    },
-    "distance": {
-      "value": 924,
-      "text": "0.6 mi"
-    }
-  }], {
-  "elements": [ {
-    "status": "OK",
-    "duration": {
-      "value": 383,
-      "text": "6 mins"
-    },
-    "distance": {
-      "value": 1531,
-      "text": "1.0 mi"
-    }
-  }]
-}]
-}
+ 
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASreEz_uUT3ApjB-wXp2drZb_FyZzTm-Y&callback=initMap">
     </script>
