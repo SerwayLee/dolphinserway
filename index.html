@@ -48,29 +48,18 @@
 				"appKey" : "l7xxe8a7a37a25674589aab900d3d2106d2f",
 				"lon" : lon,
 				"lat" : lat,
-				"toCoord" : selectLevel
-			},
-			success:function(response){
-				var resultCoordinate = response.coordinate;
-				
-				var lon2 = resultCoordinate.lon;
-				var lat2 = resultCoordinate.lat;
-				
-			    var result = lon+","+lat+"->"+lon2+","+lat2; 
-				var resultDiv = document.getElementById("result");
-				resultDiv.innerHTML = result;
-			},
-			error:function(request,status,error){
-				console.log("1");
+				var lon2 = lon;
+				var lat2 = lat;
 			}
-		});
-		
-	}
-	
-}
-			
+		}
+		       )}
+
+				
+
+				
+
 					var lat3, lon3;
-	map.addListener("auxclick", function onClick(evt){
+	map.addListener("click", function onClick(evt){
 		var mapLatLng = evt.latLng;
 		
 	 	coordConvert(mapLatLng._lng, mapLatLng._lat);
@@ -87,24 +76,11 @@
 				"appKey" : "l7xxe8a7a37a25674589aab900d3d2106d2f",
 				"lon" : lon3,
 				"lat" : lat3,
-				"toCoord" : selectLevel
-			},
-			success:function(response){
-				var resultCoordinate = response.coordinate;
-				
-				var lon4 = resultCoordinate.lon;
-				var lat4 = resultCoordinate.lat;
-				
-			    var result = lon3+","+lat3+"->"+lon4+","+lat4; 
-				var resultDiv = document.getElementById("result");
-				resultDiv.innerHTML = result;
-			},
-			error:function(request,status,error){
-				console.log("2");
+				var lon4 = lon3;
+				var lat4 = lat3;
 			}
-		});
-		
-	}
+		}
+		       )}
 	
 		
 				// 2. 시작, 도착 심볼찍기
@@ -126,7 +102,7 @@
 							icon : "http://tmapapis.sktelecom.com/upload/tmap/marker/pin_r_m_e.png",
 							iconSize : new Tmapv2.Size(24, 38),
 							map : map
-						});
+						}); 
 		
 				// 3. 경로탐색 API 사용요청
 				$("#btn_select")
