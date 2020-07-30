@@ -29,7 +29,7 @@
 					scrollwheel : true
 				});
 		
-	var lon, lat;
+	var lon, lat,lon2, lat2,lon3, lat3,lon4, lat4;
 	map.addListener("click", function onClick(evt){
 		var mapLatLng = evt.latLng;
 		
@@ -51,8 +51,8 @@
 			success:function(response){
 				var resultCoordinate = response.coordinate;
 				
-				var lon2 = resultCoordinate.lon;
-				var lat2 = resultCoordinate.lat;
+				lon2 = resultCoordinate.lon;
+				lat2 = resultCoordinate.lat;
 				
 			    var result = lon+","+lat+"->"+lon2+","+lat2; 
 			},
@@ -88,8 +88,8 @@
 			success:function(response){
 				var resultCoordinate = response.coordinate;
 				
-				var lon4 = resultCoordinate.lon;
-				var lat4 = resultCoordinate.lat;
+				 lon4 = resultCoordinate.lon;
+				 lat4 = resultCoordinate.lat;
 				
 			    var result = lon+","+lat+"->"+lon2+","+lat2; 
 			},
